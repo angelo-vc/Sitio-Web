@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valle Grande</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px; /* Espacio entre las líneas */
+        }
+        .image {
+            text-align: center;
+            margin-right: 20px;
+        }
+        .image img {
+            max-width: 200px;
+            max-height: 150px;
+        }
+        .big-image {
+            text-align: center;
+        }
+        .big-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .button {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .options {
+            display: flex;
+            align-items: center;
+        }
+        .options a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .options a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Valle Grande</h1>
+    </div>
+    <div class="content">
+        <div class="image">
+            <img src="icono_vallegrande.jpg" alt="Icono Vallegrande">
+        </div>
+        <div class="options">
+            <a href="#">Nosotros</a>
+            <a href="#">Historia</a>
+            <a href="#">Video</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="big-image">
+            <img src="imagen_grande_vallegrande.jpg" alt="Imagen Grande Vallegrande">
+        </div>
+    </div>
+    <div class="content">
+        <div class="text">
+            <h2>Quiénes somos</h2>
+            <p>Valle Grande es actualmente un Centro de Educación Superior constituido por la Promotora de Obras Sociales y de Instrucción Popular (PROSIP) el 25 de febrero de 1965, reconocido por el Ministerio de Agricultura mediante Resolución Directoral N° 04383-AG-DGAG del 2 de junio de 1983 y por el Ministerio de Educación mediante Resolución Ministerial N°0751-92-ED..</p>
+            <h2>Desarrollo histórico</h2>
+            <p>Han transcurrido casi 50 años de trabajo y continuamos con el mismo deseo, seguir contribuyendo con el bienestar de las familias de Cañete y Yauyos..</p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="text" id="additional-info" style="display: none;">
+            <h2>Misión y Visión</h2>
+            <h3>Misión</h3>
+            <p>Formar personas en el ámbito técnico profesional, considerando el sentido trascendente del hombre, desarrollando en ellos competencias, que faciliten su inserción laboral, contribuyendo de esta manera al desarrollo del país.</p>
+            <h3>Visión</h3>
+            <p>Ser una institución referente de excelencia de la educación técnico profesional del Perú, asociada al sector productivo.</p>
+            <a href="https://vallegrande.edu.pe/images/organigrama2.jpg" target="_blank"><h3>Organigrama</h3></a>
+            <p>Visita nuestro canal de <a href="https://www.youtube.com/channel/UCAy8Qkj1AQuqnKiogNdshBA">Youtube</a>.</p>
+            <img src="imagen_canal_valle_grande.jpg" alt="Imagen del Canal Valle Grande" onclick="window.open('https://www.youtube.com/channel/UCAy8Qkj1AQuqnKiogNdshBA', '_blank')">
+        </div>
+    </div>
+    <div class="button">
+        <a href="#" onclick="toggleAdditionalInfo()">LEER MÁS</a>
+    </div>
+
+    <script>
+        function toggleAdditionalInfo() {
+            var additionalInfo = document.getElementById("additional-info");
+            var buttonText = document.querySelector(".button a");
+            if (additionalInfo.style.display === "none") {
+                additionalInfo.style.display = "block";
+                buttonText.innerHTML = "LEER MENOS";
+            } else {
+                additionalInfo.style.display = "none";
+                buttonText.innerHTML = "LEER MÁS";
+            }
+        }
+    </script>
+</body>
+</html>
